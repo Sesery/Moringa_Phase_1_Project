@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+# Aircraft Purchase Data Analysis for Commercial and Private Aviation
+Project Overview
+This project analyzes aviation accident data (2013–2023) from the National Transportation Safety Board (NTSB) to help a company make data-driven decisions on purchasing aircraft for both commercial airline operations and private charter/training services.
+
+The analysis evaluates safety, fatality rates, and operational risks of different aircraft models to recommend the best options for the company’s entry into the aviation industry.
+
+>>>>>>> a3c15c7ebcf545a14dce6804a28d7c8404e83217
 ## Moringa_Phase_1_Project
 
 Aircraft Purchase Data Analysis for Commercial and Private Aviation
@@ -15,10 +24,18 @@ Identify the safest aircraft models for commercial and private operations.busine
    
  Dataset Source: National Transportation Safety Board from 1962 to 2023 about civil aviation accidents and selected incidents in the United States and international waters Time Frame Used: 2013–2023 
  
+<<<<<<< HEAD
  Key Columns: , 
 -model – Aircraft manufacturer and model injury_severity,
 -total_fatal_injuries  
 -total_incidents
 -Safety indicators broad_phase_of_flight – 
+=======
+ Key Columns:  
+-model – Aircraft manufacturer and model injury_severity
+-total_fatal_injuries  
+-total_incidents
+-Safety indicators broad_phase_of_flight 
+>>>>>>> a3c15c7ebcf545a14dce6804a28d7c8404e83217
 -Phase of flight  purpose_of_flight – Commercial, Personal, Training, etc. Data Cleaning & Preparation
 
