@@ -28,12 +28,14 @@ Key Columns:
 -total_fatal_injuries  
 -total_incidents
 -Safety indicators broad_phase_of_flight – 
-=======
+
+
+
  Key Columns:  
 -model – Aircraft manufacturer and model injury_severity
 -total_fatal_injuries  
 -total_incidents
 -Safety indicators broad_phase_of_flight 
->>>>>>> a3c15c7ebcf545a14dce6804a28d7c8404e83217
--Phase of flight  purpose_of_flight – Commercial, Personal, Training, etc. Data Cleaning & Preparation
+-Phase of flight  
+purpose_of_flight – Commercial, Personal, Training, etc. Data Cleaning & Preparation
 
