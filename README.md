@@ -22,9 +22,9 @@ Identify the safest aircraft models for commercial and private operations.busine
  Dataset Source: National Transportation Safety Board from 1962 to 2023 about civil aviation accidents and selected incidents in the United States and international waters Time Frame Used: 2013–2023 
  
  Key Columns:  
--model – Aircraft manufacturer and model injury_severity,
+-model – Aircraft manufacturer and model injury_severity
 -total_fatal_injuries  
 -total_incidents
--Safety indicators broad_phase_of_flight – 
+-Safety indicators broad_phase_of_flight 
 -Phase of flight  purpose_of_flight – Commercial, Personal, Training, etc. Data Cleaning & Preparation
 
