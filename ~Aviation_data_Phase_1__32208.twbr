@@ -24,7 +24,7 @@
     <WorksheetBackgroundTransparency />
     <ZoneBackgroundTransparency />
   </document-format-change-manifest>
-  <repository-location id='Aviation_data_Phase_1' path='/workbooks' revision='1.6' />
+  <repository-location id='Aviation_data_Phase_1' path='/workbooks' revision='1.7' />
   <preferences>
     <preference name='ui.encoding.shelf.height' value='24' />
     <preference name='ui.shelf.height' value='26' />
@@ -558,7 +558,6 @@
       <column aggregation='Avg' datatype='real' name='[Latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
       <column aggregation='Avg' datatype='real' name='[Longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
       <column datatype='string' name='[Make]' role='dimension' type='nominal' />
-      <column datatype='string' name='[Model]' role='dimension' type='nominal' />
       <column caption='Aviation_Data.csv' datatype='table' name='[__tableau_internal_object_id__].[Aviation_Data.csv_7C2D13243AFB4FD0A3C4E263B928C047]' role='measure' type='quantitative' />
       <column-instance column='[Aircraft.damage]' derivation='None' name='[none:Aircraft.damage:nk]' pivot='key' type='nominal' />
       <column-instance column='[Amateur.Built]' derivation='None' name='[none:Amateur.Built:nk]' pivot='key' type='nominal' />
@@ -566,12 +565,6 @@
       <group caption='Action (Broad.phase.of.flight)' hidden='true' name='[Action (Broad.phase.of.flight)]' name-style='unqualified' user:auto-column='sheet_link'>
         <groupfilter function='crossjoin'>
           <groupfilter function='level-members' level='[Broad.phase.of.flight]' />
-        </groupfilter>
-      </group>
-      <group caption='Action (Make,Model)' hidden='true' name='[Action (Make,Model)]' name-style='unqualified' user:auto-column='sheet_link'>
-        <groupfilter function='crossjoin'>
-          <groupfilter function='level-members' level='[Make]' />
-          <groupfilter function='level-members' level='[Model]' />
         </groupfilter>
       </group>
       <group caption='Low Acciddent Count' name='[Low Acciddent Count]' name-style='unqualified' user:ui-builder='filter-group'>
@@ -21926,6 +21919,16 @@
   <mapsources>
     <mapsource name='Tableau' />
   </mapsources>
+  <actions>
+    <action caption='Filter 1 (generated)' name='[Action1_B8E27FDE641744D384FC8D5E71595E81]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 2' type='sheet' worksheet=' Lowest Risk Aircraft By Models' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 2' />
+      </command>
+    </action>
+  </actions>
   <worksheets>
     <worksheet name=' Lowest Risk Aircraft By Models'>
       <layout-options>
@@ -21967,9 +21970,6 @@
           <filter class='quantitative' column='[federated.0qoh0sy16z65xw13gzawa1r95ymp].[__tableau_internal_object_id__].[cnt:Aviation_Data.csv_7C2D13243AFB4FD0A3C4E263B928C047:qk]' included-values='in-range'>
             <min>1</min>
             <max>2168</max>
-          </filter>
-          <filter class='categorical' column='[federated.0qoh0sy16z65xw13gzawa1r95ymp].[none:Model:nk]'>
-            <groupfilter function='member' level='[none:Model:nk]' member='&quot;212 - NO SERIES&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
           <manual-sort column='[federated.0qoh0sy16z65xw13gzawa1r95ymp].[none:Model:nk]' direction='ASC'>
             <dictionary>
@@ -22446,7 +22446,6 @@
           <slices>
             <column>[federated.0qoh0sy16z65xw13gzawa1r95ymp].[usr:Calculation_2266436548612653057:qk]</column>
             <column>[federated.0qoh0sy16z65xw13gzawa1r95ymp].[__tableau_internal_object_id__].[cnt:Aviation_Data.csv_7C2D13243AFB4FD0A3C4E263B928C047:qk]</column>
-            <column>[federated.0qoh0sy16z65xw13gzawa1r95ymp].[none:Model:nk]</column>
           </slices>
           <aggregation value='true' />
         </view>
@@ -22974,10 +22973,10 @@
       </zones>
       <devicelayouts>
         <devicelayout auto-generated='true' name='Phone'>
-          <size maxheight='1000' minheight='1000' sizing-mode='vscroll' />
+          <size maxheight='950' minheight='950' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='12' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98140' id='11' param='vert' type-v2='layout-flow' w='97538' x='1231' y='930'>
+            <zone h='100000' id='17' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98140' id='16' param='vert' type-v2='layout-flow' w='97538' x='1231' y='930'>
                 <zone h='7093' id='4' name=' Lowest Risk Aircraft By Models' param='[federated.0qoh0sy16z65xw13gzawa1r95ymp].[__tableau_internal_object_id__].[cnt:Aviation_Data.csv_7C2D13243AFB4FD0A3C4E263B928C047:qk]' show-domain='false' show-null-ctrls='false' type-v2='filter' w='24615' x='4615' y='2209'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -22996,7 +22995,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='280' h='50581' id='8' is-fixed='true' name='Phase Flight  Accident Experienced' w='209538' x='162615' y='42674'>
+                <zone fixed-size='280' h='56744' id='5' is-fixed='true' name='Aircraft Damage by Purpose of Flight' w='157385' x='4462' y='56860'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -23005,7 +23004,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='280' h='46977' id='5' is-fixed='true' name='Aircraft Damage by Purpose of Flight' w='157385' x='4154' y='46279'>
+                <zone fixed-size='280' h='52442' id='8' is-fixed='true' name='Phase Flight  Accident Experienced' w='209538' x='162615' y='62674'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -23216,8 +23215,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='850' minheight='850' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='39' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='97516' id='38' param='vert' type-v2='layout-flow' w='97538' x='1231' y='1242'>
+            <zone h='100000' id='43' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97516' id='42' param='vert' type-v2='layout-flow' w='97538' x='1231' y='1242'>
                 <zone h='8074' id='8' mode='checkdropdown' name='Phase Flight  Accident Experienced' param='[federated.0qoh0sy16z65xw13gzawa1r95ymp].[none:Aircraft.damage:nk]' type-v2='filter' w='4923' x='93846' y='930'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -23518,7 +23517,7 @@
           <zoom type='entire-view' />
         </viewpoint>
       </viewpoints>
-      <active id='3' />
+      <active id='-1' />
       <device-preview selected='Desktop' visible='true'>
         <device name='Large Desktop Monitor' type='Desktop' />
       </device-preview>
