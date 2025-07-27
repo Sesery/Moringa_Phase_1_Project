@@ -38,4 +38,3 @@ Key Columns:
 -Safety indicators broad_phase_of_flight 
 -Phase of flight  
 purpose_of_flight – Commercial, Personal, Training, etc. Data Cleaning & Preparation
-
