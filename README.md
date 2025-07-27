@@ -1,13 +1,13 @@
-Aircraft Purchase Data Analysis for Commercial and Private Aviation
+# Aircraft Purchase Data Analysis for Commercial and Private Aviation
 Project Overview
 This project analyzes aviation accident data (2013–2023) from the National Transportation Safety Board (NTSB) to help a company make data-driven decisions on purchasing aircraft for both commercial airline operations and private charter/training services.
 
 The analysis evaluates safety, fatality rates, and operational risks of different aircraft models to recommend the best options for the company’s entry into the aviation industry.
 
-Objectives
+# Objectives
 Identify the safest aircraft models for commercial and private operations.
 Analyze accident trends by year, flight phase, weather conditions, and purpose of flight.
-Provide actionable business recommendations for aircraft acquisition or leasing.
+Provide actionable business recommendations for aircraft acquisition or leasing
 Support the company’s market entry strategy into aviation through data-driven insights.
 Dataset
 Source: National Transportation Safety Board from 1962 to 2023 about civil aviation accidents and selected incidents in the United States and international waters
