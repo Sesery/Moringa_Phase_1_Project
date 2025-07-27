@@ -20,10 +20,10 @@ broad_phase_of_flight – Phase of flight during accident
 weather_condition – VMC (Visual) or IMC (Instrument)
 purpose_of_flight – Commercial, Personal, Training, etc.
 Data Cleaning & Preparation
-. Standardized date format and extracted year
-. Replaced missing values (weather_condition, broad_phase_of_flight) with "Unknown"
-. Created a fatal accident indicator (1 = fatal, 0 = non-fatal)
-. Filtered to only include aircraft with 30+ accidents for reliable statistics
+- Standardized date format and extracted year
+-Replaced missing values (weather_condition, broad_phase_of_flight) with "Unknown"
+-Created a fatal accident indicator (1 = fatal, 0 = non-fatal)
+-Filtered to only include aircraft with 30+ accidents for reliable statistics
 
 Analysis Performed
 1. Safety by Aircraft Model
